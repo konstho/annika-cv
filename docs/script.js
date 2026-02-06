@@ -11,7 +11,7 @@ let i = 0;
 
 function render() {
   const step = 100 / pages.length; // works for 3, 4, 5... pages
-  track.style.transform = `translate3d(-${i * step}%, 0, 0)`;
+  track.style.transform = `translateX(-${i * step}%)`;
 
 
   prevBtn.disabled = i === 0;
