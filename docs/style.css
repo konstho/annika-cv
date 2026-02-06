@@ -40,7 +40,7 @@ body{
 .topnav button{
   background: none;
   border: none;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 600;
   color: var(--muted);
   cursor: pointer;
@@ -131,8 +131,10 @@ body{
   height: 100%;
   display: flex;
   width: 300%;
-  transform: translate3d(0,0,0);
+  transform: translateX(0); /* <-- tärkeä: EI translate3d */
   transition: transform 700ms cubic-bezier(.2,.9,.2,1);
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
 .page{
@@ -159,15 +161,18 @@ body{
 }
 
 .page-3{
-  display: flex;
-  align-items: flex-start;
   background:
     radial-gradient(circle at 30% 80%, rgba(85,239,196,0.08), transparent 50%),
     radial-gradient(circle at 70% 20%, rgba(116,185,255,0.06), transparent 50%),
     linear-gradient(135deg, #fafffe 0%, #f6fdfb 100%);
-  padding-top: 72px;
-  padding-bottom: 18px;
 }
+
+/* Vain Kokemus-sivulle eri padding */
+.page.page-3{
+  padding: 68px 18px 14px;
+  align-items: flex-start;
+}
+
 
 .page-3 .content{
   margin-top: 0;
@@ -241,12 +246,6 @@ h2{
   font-weight: 700;
 }
 
-h3{
-  margin: 0 0 8px;
-  font-size: 16px;
-  color: var(--text);
-  font-weight: 600;
-}
 
 .grid2{
   display:grid;
@@ -255,39 +254,11 @@ h3{
   margin-top: 20px;
 }
 
-ul{
-  margin:12px 0 0;
-  padding-left:20px;
-  color: var(--text);
-  line-height: 1.7;
-}
-li{
-  margin: 8px 0;
-  position: relative;
-}
 
 li::marker{
   color: var(--accent-light);
 }
 
-.timeline{
-  display:flex;
-  flex-direction:column;
-  gap: 12px;
-  margin-top: 20px;
-}
-.item{
-  display:grid;
-  grid-template-columns: 140px 1fr;
-  gap: 18px;
-}
-.when{
-  color: var(--accent);
-  font-size: 13px;
-  letter-spacing:0.08em;
-  text-transform: uppercase;
-  font-weight: 600;
-}
 
 .what p{
   color: var(--text);
@@ -438,25 +409,62 @@ li::marker{
 }
 
 .page-3 .timeline{
-  margin-top: 10px;          /* ennen 20px */
-  gap: 10px;                 /* ennen 12px */
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;          /* ennen 20px */
+  gap: 20px;                 /* ennen 12px */
 }
 
 .page-3 ul{
-  line-height: 1.55;         /* ennen 1.7 */
-  margin-top: 6px;           /* ennen 12px */
+  line-height: 1.65;         /* ennen 1.7 */
+  margin-top: 10px;           /* ennen 12px */
 }
 
 .page-3 li{
-  margin: 6px 0;             /* ennen 8px */
+  margin: 8px 0;             /* ennen 8px */
 }
 
 /* kapeampi vuosikolumni vain page-3 */
 .page-3 .item{
-  grid-template-columns: 110px 1fr;  /* ennen 140px */
-  gap: 14px;                         /* ennen 18px */
+  grid-template-columns: 120px 1fr;  /* ennen 140px */
+  gap: 16px;                         /* ennen 18px */
 }
 
 /* pieni fonttitiivistys vain page-3 (ei pakko, mutta auttaa mahtumaan) */
 .page-3 .when{ font-size: 12px; }
 .page-3 h3{ font-size: 15px; }
+
+/* Scroll vain Kokemus-sivulle */
+.page.page-3{
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 24px; /* ettei viimeinen kortti jää piiloon */
+}
+
+/* halutessa piilota scrollbar (Chrome/Safari) */
+.page.page-3::-webkit-scrollbar{
+  width: 10px;
+}
+.page.page-3::-webkit-scrollbar-thumb{
+  background: rgba(0,0,0,0.12);
+  border-radius: 999px;
+}
+.page.page-3::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+.icon{
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: -3px;
+  margin-right: 8px;
+  fill: currentColor; /* ottaa chipin tekstivärin */
+}
+
+.chip-ig{
+  text-decoration: none;
+}
+
+
+
