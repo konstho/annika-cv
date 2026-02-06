@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Full Page CV</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+
+
+
+  <!-- Fixed top bar (stays while pages slide) -->
+  <header class="topbar">
+  <div class="spacer"></div>
+
+  <nav class="topnav">
+    <button data-page="0">Koti</button>
+    <button data-page="1">Taidot</button>
+    <button data-page="2">Kokemus</button>
+  </nav>
+
+  <div class="spacer"></div>
+</header>
+
+
+  <!-- Full-screen slider -->
+  <main class="viewport">
+    <div class="track" id="track">
+
+      <!-- PAGE 1 -->
+      <section class="page page-1">
+        <div class="content">
+          <div class="hero">
+
+            <img class="avatar" src="./kuva.jpg" alt="Portrait of her">
+
+            <div class="hero-text">
+    <h1>Annika Mäkipörhölä</h1>
+    <p class="subtitle">Luokanopettajaopiskelija · Oulu, Suomi</p>
+  </div>
+</div>
+
+
+          <div class="chips">
+            <span class="chip">annika.makiporhola@gmail.com</span>
+            <span class="chip">+358 40 557 7191</span>
+            <a class="chip" href="CV.pdf" target="_blank" rel="noopener"> CV (PDF)</a>
+          </div>
+
+
+          <div class="glass">
+            <h2>Tietoja minusta</h2>
+            <p>
+              Olen valmistuva luokanopettaja, jolla on vahva pedagoginen osaaminen sekä kokemusta peruskoulun arjesta ja erilaisten
+    ryhmien ohjaamisesta. Minulla on laaja digiosaaminen ja kokemusta muun muassa verkkosivu- ja sometyöstä sekä
+    kansainvälisestä EPEP-projektista. Opin nopeasti uusia työkaluja ja haluan jatkuvasti kehittää osaamistani.
+    Työskentelen sujuvasti itsenäisesti, mutta viihdyn myös tiimissä ja haen organisaatiota, jossa voin kasvaa pitkäjänteisesti.
+  </p>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- PAGE 2 -->
+      <section class="page page-2">
+        <div class="grid2">
+  <div class="glass">
+    <h2>Taidot</h2>
+    <ul>
+      <li>Microsoft Office</li>
+      <li>Vahva ICT-perusosaaminen</li>
+      <li>Verkkosivujen päivitys ja sometyö (IG, FB)</li>
+      <li>Opetuksen suunnittelu, eriyttäminen ja oppijalähtöinen ohjaus</li>
+      <li>Digitaaliset oppimateriaalit ja oppimisalustat opetuksessa</li>
+    </ul>
+  </div>
+
+  <div class="glass">
+    <h2>Kielitaito & muu</h2>
+    <ul>
+      <li>Suomi</li>
+      <li>Englanti (erinomainen)</li>
+      <li>Ruotsi, saksa ja espanja (perusteet)</li>
+      <li>B-ajokortti ja tarvittaessa oma auto</li>
+    </ul>
+  </div>
+</div>
+
+      </section>
+
+   <!-- PAGE 3 -->
+<section class="page page-3">
+  <div class="content">
+
+    <div class="timeline">
+      <div class="glass item">
+        <div class="when">2023 —</div>
+        <div class="what">
+          <h3>Opettajansijaisuudet ja harjoittelut</h3>
+          <p>Kokemusta peruskoulun arjesta ja eri luokka-asteista.</p>
+          <ul>
+            <li>Suunnitellut ja toteuttanut opetusta itsenäisesti</li>
+            <li>Tukenut oppilaita eriyttämisen keinoin</li>
+            <li>Ohjannut ryhmiä rauhallisesti, selkeästi ja oppijalähtöisesti</li>
+            <li>Käyttänyt digitaalisia materiaaleja ja oppimisalustoja osana opetusta</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="glass item">
+        <div class="when">2025 — 2026</div>
+        <div class="what">
+          <h3>EPEP Tansania -projektin jäsen</h3>
+          <ul>
+            <li>Veimme Tansaniaan kestävän kehityksen, liikunnan ja uinnin opetussisältöjä</li>
+            <li>Rakensimme ja pilotoimme yliopistokurssin paikalliselle yliopistolle</li>
+            <li>Pidin esityksiä ja koulutuksia Tansanian yliopistojen johtajille ja henkilökunnalle</li>
+            <li>Työ vaati kulttuurienvälistä viestintää, pedagogista suunnittelua ja esiintymisvarmuutta</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="glass item">
+        <div class="when">2017 —</div>
+        <div class="what">
+          <h3>Voimisteluvalmentaja ja seuratyöntekijä</h3>
+          <ul>
+            <li>Vuodesta 2017 alkaen joukkueiden valmentamista, harjoitussisältöjen ja kausisuunnitelmien rakentamista</li>
+            <li>Suunnittelin ja toteutin lasten kesäleirit alusta loppuun (2023, 2024, 2025): aikataulut, mainonta, viestintä, nuorten ohjaajien mentorointi</li>
+            <li>2024 myös etätyötä: päivitin verkkosivuja ja seuran somea (IG, FB)</li>
+            <li>Kehittänyt esiintymis- ja ryhmänohjaustaitoja</li>
+          </ul>
+        </div>
+      </div>
+    </div> <!-- /timeline -->
+  </div> <!-- /content -->
+</section>
+    </div> <!-- /track -->
+
+
+    <!-- Arrows (fixed on the page, not inside a box) -->
+    <button class="nav left" id="prevBtn" aria-label="Previous">←</button>
+    <button class="nav right" id="nextBtn" aria-label="Next">→</button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
