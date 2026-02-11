@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Full Page CV</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300..800&family=Fraunces:opsz,wght@9..144,400..700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+
+
+
+  <!-- Fixed top bar (stays while pages slide) -->
+  <header class="topbar">
+  <div class="spacer"></div>
+
+  <nav class="topnav">
+  <a href="#koti" class="navlink">Koti</a>
+  <a href="#taidot" class="navlink">Taidot</a>
+  <a href="#kokemus" class="navlink">Kokemus</a>
+</nav>
+
+  <div class="spacer"></div>
+</header>
+
+
+  <!-- Full-screen slider -->
+  <main class="scroll">
+
+  <!-- KOTI -->
+  <section id="koti" class="section page-1">
+    <div class="content">
+      <div class="hero">
+        <img class="avatar" src="kuva.jpg" alt="annika">
+        <div class="hero-text">
+          <h1>Annika Mäkipörhölä</h1>
+          <p class="subtitle">Luokanopettajaopiskelija · Oulu, Suomi</p>
+        </div>
+      </div>
+
+      <div class="chips">
+        <span class="chip">annika.makiporhola@gmail.com</span>
+        <span class="chip">+358 40 557 7191</span>
+        <a class="chip" href="CV.pdf" target="_blank" rel="noopener"> CV (PDF)</a>
+        <a class="chip chip-ig"
+           href="https://instagram.com/annikahelmiina"
+           target="_blank"
+           rel="noopener"
+           aria-label="Instagram">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 4.5A5.5 5.5 0 1 1 6.5 14 5.5 5.5 0 0 1 12 8.5zm0 2A3.5 3.5 0 1 0 15.5 14 3.5 3.5 0 0 0 12 10.5zM18 6.75a1.25 1.25 0 1 1-1.25-1.25A1.25 1.25 0 0 1 18 6.75z"/>
+          </svg>
+          Instagram
+        </a>
+      </div>
+
+      <div class="glass">
+        <h2>Tietoja minusta</h2>
+        <p>
+          Olen valmistuva luokanopettaja, jolla on vahva pedagoginen osaaminen sekä kokemusta peruskoulun arjesta ja erilaisten
+          ryhmien ohjaamisesta. Minulla on laaja digiosaaminen ja kokemusta muun muassa verkkosivu- ja sometyöstä sekä
+          kansainvälisestä EPEP-projektista. Opin nopeasti uusia työkaluja ja haluan jatkuvasti kehittää osaamistani.
+          Työskentelen sujuvasti itsenäisesti, mutta viihdyn myös tiimissä ja haen organisaatiota, jossa voin kasvaa pitkäjänteisesti.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TAIDOT -->
+  <section id="taidot" class="section page-2">
+    <div class="content">
+      <div class="grid2">
+        <div class="glass">
+          <h2>Taidot</h2>
+          <ul>
+            <li>Microsoft Office</li>
+            <li>Vahva ICT-perusosaaminen</li>
+            <li>Verkkosivujen päivitys ja sometyö (IG, FB)</li>
+            <li>Opetuksen suunnittelu, eriyttäminen ja oppijalähtöinen ohjaus</li>
+            <li>Digitaaliset oppimateriaalit ja oppimisalustat opetuksessa</li>
+          </ul>
+        </div>
+
+        <div class="glass">
+          <h2>Kielitaito & muu</h2>
+          <ul>
+            <li>Suomi</li>
+            <li>Englanti (erinomainen)</li>
+            <li>Ruotsi, saksa ja espanja (perusteet)</li>
+            <li>B-ajokortti ja tarvittaessa oma auto</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KOKEMUS -->
+  <section id="kokemus" class="section page-3">
+    <div class="content">
+      <div class="timeline">
+
+        <div class="glass item">
+          <div class="when">2023 —</div>
+          <div class="what">
+            <h3>Opettajansijaisuudet ja harjoittelut</h3>
+            <p>Kokemusta peruskoulun arjesta ja eri luokka-asteista.</p>
+            <ul>
+              <li>Suunnitellut ja toteuttanut opetusta itsenäisesti</li>
+              <li>Tukenut oppilaita eriyttämisen keinoin</li>
+              <li>Ohjannut ryhmiä rauhallisesti, selkeästi ja oppijalähtöisesti</li>
+              <li>Käyttänyt digitaalisia materiaaleja ja oppimisalustoja osana opetusta</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="glass item">
+          <div class="when">2025 — 2026</div>
+          <div class="what">
+            <h3>EPEP Tansania -projektin jäsen</h3>
+            <ul>
+              <li>Veimme Tansaniaan kestävän kehityksen, liikunnan ja uinnin opetussisältöjä</li>
+              <li>Rakensimme ja pilotoimme yliopistokurssin paikalliselle yliopistolle</li>
+              <li>Pidin esityksiä ja koulutuksia Tansanian yliopistojen johtajille ja henkilökunnalle</li>
+              <li>Työ vaati kulttuurienvälistä viestintää, pedagogista suunnittelua ja esiintymisvarmuutta</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="glass item">
+          <div class="when">2017 —</div>
+          <div class="what">
+            <h3>Voimisteluvalmentaja ja seuratyöntekijä</h3>
+            <ul>
+              <li>Vuodesta 2017 alkaen joukkueiden valmentamista, harjoitussisältöjen ja kausisuunnitelmien rakentamista</li>
+              <li>Suunnittelin ja toteutin lasten kesäleirit alusta loppuun (2023, 2024, 2025): aikataulut, mainonta, viestintä, nuorten ohjaajien mentorointi</li>
+              <li>2024 myös etätyötä: päivitin verkkosivuja ja seuran somea (IG, FB)</li>
+              <li>Kehittänyt esiintymis- ja ryhmänohjaustaitoja</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
