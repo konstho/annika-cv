@@ -1,67 +1,36 @@
-const track = document.getElementById("track");
-const prevBtn = document.getElementById("prevBtn");
-const nextBtn = document.getElementById("nextBtn");
+const links = Array.from(document.querySelectorAll(".navlink"));
+const sections = links
+  .map(a => document.querySelector(a.getAttribute("href")))
+  .filter(Boolean);
 
-const pages = Array.from(document.querySelectorAll(".page"));
-const navButtons = document.querySelectorAll(".topnav button");
+links.forEach(link => {
+  link.addEventListener("click", (e) => {
+    const id = link.getAttribute("href");
+    const target = document.querySelector(id);
+    if (!target) return;
 
-const names = ["Koti", "Taidot", "Kokemus"];
-
-let i = 0;
-
-function render() {
-  const step = 100 / pages.length; // works for 3, 4, 5... pages
-  track.style.transform = `translate3d(-${i * step}%, 0, 0)`;
-
-
-  prevBtn.disabled = i === 0;
-  nextBtn.disabled = i === pages.length - 1;
-
-  navButtons.forEach((btn, idx) => {
-    btn.classList.toggle("active", idx === i);
-  });
-}
-
-// Top nav clicks
-navButtons.forEach(btn => {
-  btn.addEventListener("click", () => {
-    i = Number(btn.dataset.page);
-    render();
+    e.preventDefault();
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
+    history.replaceState(null, "", id);
   });
 });
 
-// Arrow buttons
-prevBtn.addEventListener("click", () => {
-  if (i > 0) i--;
-  render();
-});
-nextBtn.addEventListener("click", () => {
-  if (i < pages.length - 1) i++;
-  render();
-});
+const observer = new IntersectionObserver(
+  (entries) => {
+    const visible = entries
+      .filter(e => e.isIntersecting)
+      .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
 
-// Keyboard
-window.addEventListener("keydown", (e) => {
-  if (e.key === "ArrowLeft" && i > 0) { i--; render(); }
-  if (e.key === "ArrowRight" && i < pages.length - 1) { i++; render(); }
-});
+    if (!visible) return;
 
-// Swipe
-let startX = null;
-window.addEventListener("touchstart", (e) => {
-  startX = e.touches[0].clientX;
-}, { passive: true });
-
-window.addEventListener("touchend", (e) => {
-  if (startX === null) return;
-  const dx = e.changedTouches[0].clientX - startX;
-
-  if (Math.abs(dx) > 50) {
-    if (dx < 0 && i < pages.length - 1) i++;
-    if (dx > 0 && i > 0) i--;
-    render();
+    const id = "#" + visible.target.id;
+    links.forEach(a => a.classList.toggle("active", a.getAttribute("href") === id));
+  },
+  {
+    root: null,
+    rootMargin: "-45% 0px -45% 0px",
+    threshold: [0.15, 0.25, 0.35, 0.5, 0.65]
   }
-  startX = null;
-}, { passive: true });
+);
 
-render();
+sections.forEach(sec => observer.observe(sec));
