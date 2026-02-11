@@ -1,11 +1,11 @@
 :root{
-  --bg: #e9dfd4;          /* warm beige */
+  --bg: #e9dfd4;          
   --panel: #ffffff;
   --ink: #111111;
   --muted: #4b4b4b;
   --line: rgba(17,17,17,0.10);
 
-  --accent: #1e5bff;      /* Wix-like blue */
+  --accent: #1e5bff;      
   --accent-soft: rgba(30,91,255,0.12);
 
   --font-sans: "Manrope", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
